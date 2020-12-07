@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout CSS | Part #02 - Modulul Flex</title>
+
+    <style>
+        /* Globale */
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box;
+        }
+
+        /* Utile */
+        .p-10 {
+            padding: 10px;
+        }
+
+        .mb-10 {
+            margin-bottom: 10px;
+        }
+
+        .bg-grey {
+            background-color: gainsboro;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            padding-right: 10px;
+            padding-left: 10px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Parti de layout */
+        .antet,
+        .nav,
+        .footer {
+            height: 50px;
+        }
+
+        .content,
+        .sidebar {
+            height: 280px;
+        }
+
+        .content {
+            width: 50%;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .sidebar {
+            width: calc(25% - 10px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="antet p-10 mb-10 bg-grey text-center">Antet</header>
+    </div>
+    <div class="container">
+        <nav class="nav p-10 mb-10 bg-grey text-center">Navigatie</nav>
+    </div>
+    <div class="container">
+        <div class="row">
+            <aside class="sidebar p-10 mb-10 bg-grey text-center">Bara laterala stanga</aside>
+            <main class="content p-10 mb-10 bg-grey text-center">Continut</main>
+            <aside class="sidebar p-10 mb-10 bg-grey text-center">Bara laterala dreapta</aside>
+        </div>
+    </div>
+    <div class="container">
+        <footer class="footer p-10 bg-grey text-center">Subsol</footer>
+    </div>
+</body>
+
+</html>
